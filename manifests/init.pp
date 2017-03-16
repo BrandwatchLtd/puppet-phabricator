@@ -1,9 +1,7 @@
 # Install and configure phabricator.
 class phabricator($dependencies) {
 
-  require ::git
-
-  ensure_packages($dependencies, { ensure => latest })
+  ensure_packages($dependencies, { ensure => installed })
 
   vcsrepo { '/opt/arcanist':
     ensure   => present,
