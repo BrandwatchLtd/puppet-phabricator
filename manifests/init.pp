@@ -1,7 +1,5 @@
 # Install and configure phabricator.
-class phabricator($dependencies) {
-
-  ensure_packages($dependencies, { ensure => installed })
+class phabricator() {
 
   vcsrepo { '/opt/arcanist':
     ensure   => present,
